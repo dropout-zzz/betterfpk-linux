@@ -6,6 +6,7 @@
 #include <map>
 #include <filesystem>
 #include <chrono>
+#include <algorithm>
 
 #include <cstdint>
 
@@ -351,9 +352,9 @@ void pack_fpk_async(const std::deque<fs::path>& files, const fs::path& outpath, 
 void pack_fpk(const fs::path& inpath, const fs::path& outpath, int version)
 {
 	if (!fs::exists(inpath))
-		throw std::exception("The input path does not exist!");
+		throw std::runtime_error("The input path does not exist!");
 	if (!fs::is_directory(inpath))
-		throw std::exception("The input path must be a directory!");
+		throw std::runtime_error("The input path must be a directory!");
 
 	fs::path p;
 	std::string name;

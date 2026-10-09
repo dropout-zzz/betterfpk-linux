@@ -6,7 +6,7 @@ You might be wondering: why is this crappy piece of code called "*better*fpk"? W
 
 ## Usage
 ```
-Usage: betterfpk.exe [options] <input>
+Usage: betterfpk [options] <input>
 Options should be from the following list:
 
 Modes:
@@ -34,11 +34,11 @@ General options:
 ### Examples
 Extracting: 
 ```
-betterfpk.exe --extract -o cg_extracted cg.fpk
-betterfpk.exe --extract --version 4 -o data_extracted data.fpk
+betterfpk --extract -o cg_extracted cg.fpk
+betterfpk --extract --version 4 -o data_extracted data.fpk
 ```
 Repacking:
 ```
-betterfpk.exe --pack -o cg_modified.pak folder/with/modified/cgs
-betterfpk.exe --pack --version 4 -o data_modified.pak folder/with/modified/data
+betterfpk --pack -o cg_modified.pak folder/with/modified/cgs
+betterfpk --pack --version 4 -o data_modified.pak folder/with/modified/data
 ```

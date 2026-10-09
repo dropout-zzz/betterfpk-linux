@@ -1,6 +1,7 @@
 #pragma once
 #include <vector>
 #include <exception>
+#include <cstring>
 
 class rle
 {
@@ -23,7 +24,7 @@ public:
 		//hdr.signature = '0ELR';
 		//hdr.depth = 
 
-		throw std::exception("RLE compression is not yet implemented.");
+		throw std::runtime_error("RLE compression is not yet implemented.");
 	}
 
 	static std::vector<uint8_t> decompress(const std::vector<uint8_t>& input)

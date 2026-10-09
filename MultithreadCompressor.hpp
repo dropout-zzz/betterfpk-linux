@@ -139,7 +139,7 @@ public:
 	void start(Mode mode)
 	{
 		if (_state != State::idle)
-			throw std::exception("Compressor is already busy!");
+			throw std::runtime_error("Compressor is already busy!");
 		if (options.verbose)
 		{
 			std::cout << "Starting " << (mode == Mode::compress ? "compression" : "decompression")
