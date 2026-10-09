@@ -669,7 +669,7 @@ int main(int argc, const char** argv)
 		else if (options.mode == ExecutionMode::LIST)
 		{
 			// TODO
-			printf("Not implemented");
+			printf("Not implemented\n");
 		}
 	}
 	catch (const std::ios::failure& fail)
